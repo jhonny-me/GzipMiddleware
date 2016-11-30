@@ -4,7 +4,7 @@ import Foundation
 
 public final class GzipMiddleware: Middleware {
     public func respond(to request: Request, chainingTo next: Responder) throws -> Response {
-        let response = try! next.respond(to: request)
+        let response = try next.respond(to: request)
         
         if request.requiresGzip && response.gzippable && !response.isGzipped {
             // TODO: should check cache first
@@ -41,7 +41,6 @@ extension Request {
 
 extension Response {
     var gzippable: Bool {
-        dump(contentType)
         guard let contentType = contentType else { return false }
         if contentType.contains("text/html") || contentType.contains("application/javascript") || contentType.contains("text/css") {
             return true
