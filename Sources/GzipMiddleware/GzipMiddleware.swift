@@ -2,11 +2,10 @@ import Vapor
 import HTTP
 import Foundation
 
-final class GzipMiddleware: Middleware {
-    func respond(to request: Request, chainingTo next: Responder) throws -> Response {
+public final class GzipMiddleware: Middleware {
+    public func respond(to request: Request, chainingTo next: Responder) throws -> Response {
         let response = try! next.respond(to: request)
         
-        dump(request)
         if request.requiresGzip && response.gzippable && !response.isGzipped {
             // TODO: should check cache first
 //            let gzipFilePath = self.workDir + "Public" + request.uri.path + ".gzip"
@@ -30,6 +29,8 @@ final class GzipMiddleware: Middleware {
         
         return response
     }
+    
+    public init() {}
 }
 
 extension Request {
