@@ -18,8 +18,8 @@ This is a middleware for [Vapor](https://vapor.codes/) framework to enable gzip 
 
 ## ToDo
 
-- [ ]use cache first
-- [ ]cache gzipped data
+- [ ] use cache first
+- [ ] cache gzipped data
 
 ## About
 Thanks support from [https://github.com/1024jp/GzipSwift](https://github.com/1024jp/GzipSwift), [https://github.com/Zewo/CZlib](https://github.com/Zewo/CZlib)
