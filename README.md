@@ -1,6 +1,9 @@
 # GzipMiddleware
 gzip enable  Middleware for Vapor
 
+![Platforms](https://img.shields.io/badge/platforms-Linux%20%7C%20OS%20X-blue.svg)
+![Package Managers](https://img.shields.io/badge/package%20managers-SwiftPM-yellow.svg)
+
 ## What is this
 This is a middleware for [Vapor](https://vapor.codes/) framework to enable gzip on Server.
 
