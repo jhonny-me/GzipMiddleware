@@ -16,4 +16,14 @@ This is a middleware for [Vapor](https://vapor.codes/) framework to enable gzip 
 2. in your code `let drop = Droplet(availableMiddleware: ["gzip" :GzipMiddleware()])`
 3. add `"gzip"` to Config/droplet.json => middleware => server
 
+## ToDo
+
+- [ ]use cache first
+- [ ]cache gzipped data
+
 ## About
+Thanks support from [https://github.com/1024jp/GzipSwift](https://github.com/1024jp/GzipSwift), [https://github.com/Zewo/CZlib](https://github.com/Zewo/CZlib)
+
+## Licences
+
+MIT
