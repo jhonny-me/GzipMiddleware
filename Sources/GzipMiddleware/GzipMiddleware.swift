@@ -42,7 +42,7 @@ extension Request {
 extension Response {
     var gzippable: Bool {
         guard let contentType = contentType else { return false }
-        if contentType.contains("text/html") || contentType.contains("application/javascript") || contentType.contains("text/css") {
+        if contentType.contains("text/html") || contentType.contains("application/javascript")  || contentType.contains("application/json") || contentType.contains("text/css") {
             return true
         }
         return false
